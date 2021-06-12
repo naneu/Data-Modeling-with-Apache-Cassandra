@@ -27,6 +27,7 @@ As mentioned earlier the data is currently stored as a collection of csv files p
 The ETL pipeline and data modeling are written in a single jupyter notebook, data_modeling_with_cassandra.ipynb.
 
 The ETL copies data from the date-partitioned csv files to a single csv file event_datafile_new.csv which is used to populate the denormalized Cassandra tables optimised for the 3 queries above. The 3 tables in the model are named after the song play query they are created to solve:
+
 1. session_songs includes artist, song title and song length information for a given sessionId and itemInSessionId.
 2. event_log includes artist, song and user for a given userId and sessionId.
 3. song_users includes user names for a given song.
